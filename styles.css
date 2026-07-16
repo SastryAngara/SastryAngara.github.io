@@ -60,7 +60,11 @@ h1 { font-size: clamp(3rem, 7vw, 5.5rem); line-height: .98; letter-spacing: -.05
 }
 .button.primary { color: #fff; background: var(--accent); }
 .button.primary:hover { background: var(--accent-dark); }
-.button.secondary { border: 1px solid #aebbc8; background: #fff; }
+.button.secondary {
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+}
 .availability { color: var(--muted); font-size: .92rem; margin-top: 22px; }
 .profile-card { background: #fff; padding: 10px 30px; border-radius: 18px; box-shadow: var(--shadow); }
 .metric { padding: 22px 0; border-bottom: 1px solid var(--line); display: flex; align-items: baseline; gap: 15px; }
