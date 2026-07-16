@@ -125,3 +125,23 @@ footer a { color: #fff; }
   .section { padding: 70px 0; }
   .footer-wrap { flex-direction: column; gap: 8px; }
 }
+
+.hero {
+    padding:40px 0;
+    background:white;
+}
+
+.hero-banner{
+    width:100%;
+    border-radius:14px;
+    box-shadow:0 12px 30px rgba(0,0,0,.12);
+    display:block;
+}
+
+.hero-buttons{
+    display:flex;
+    gap:15px;
+    justify-content:center;
+    margin-top:25px;
+    flex-wrap:wrap;
+}
