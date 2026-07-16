@@ -40,7 +40,7 @@ a { color: inherit; }
 .site-nav a:hover { color: var(--accent); }
 .menu-button { display: none; }
 .hero-banner{
-    width:100%;
+    width:50%;
     height:380px;
     object-fit:cover;
     object-position:left;
