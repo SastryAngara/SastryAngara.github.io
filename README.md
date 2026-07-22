@@ -1,54 +1,75 @@
 # Sastry Angara Career Website
 
-A zero-cost static career website prepared for GitHub Pages.
+Live site: `https://sastryangara.github.io`
 
-## Before publishing
+## Purpose
 
-Open `index.html` and replace:
+The Resume Library is the official source for recruiters and hiring teams to download the latest approved version of each profile. Recruiters should use these files rather than older copies stored in email or local folders.
 
-- `YOUR_EMAIL@example.com`
-- `YOUR_LINKEDIN_URL`
+## Repository structure
 
-Review the experience and certification wording. Do not publish confidential client information, personal addresses, immigration documents, references, or private phone numbers.
-
-## Publish with GitHub Pages
-
-1. Create or sign in to a free GitHub account.
-2. Create a **public** repository named exactly:
-   `YOUR-GITHUB-USERNAME.github.io`
-3. Upload `index.html`, `styles.css`, and `script.js` to the repository root.
-4. Open the repository's **Settings**.
-5. Select **Pages**.
-6. Under **Build and deployment**, choose **Deploy from a branch**.
-7. Select branch **main** and folder **/(root)**, then save.
-8. Your website will use:
-   `https://YOUR-GITHUB-USERNAME.github.io`
-
-Publishing can require a short processing period after the first upload.
-
-## Updating the site later
-
-Edit the file directly in GitHub or upload a replacement file and commit the change. GitHub Pages redeploys the updated version.
-
-## Optional resume downloads
-
-Create a folder named `resumes`, upload only the resume versions you want public, and add links such as:
-
-```html
-<a href="resumes/Sastry-Angara-Program-Manager.pdf">Program Manager Resume</a>
+```text
+index.html
+styles.css
+script.js
+resumes/
+  Sastry-Angara-Program-Manager.pdf
+  Sastry-Angara-Technical-Project-Manager.pdf
+  Sastry-Angara-Scrum-Master.pdf
+  Sastry-Angara-Business-Analyst.pdf
+  Sastry-Angara-Data-BI-Reporting.pdf
+  Sastry-Angara-Service-Delivery.pdf
 ```
 
-PDF is preferable to DOCX for a public website because it preserves formatting and is harder to alter accidentally.
+## Initial setup
 
-## Privacy and positioning recommendations
+1. Create a folder named `resumes` in the GitHub repository.
+2. Upload each approved PDF using the exact filename shown above.
+3. Commit the files.
+4. GitHub Pages will automatically update.
 
-- Publish email and LinkedIn.
-- Consider leaving your phone number only on the resume.
-- Do not display full home address.
-- Do not state sensitive visa identifiers or document numbers.
-- Use only metrics and client information that you are comfortable making public.
-- Keep the public site broad; send the tailored resume separately for each role.
+Do not publish a card until its corresponding PDF has been uploaded. A missing file will produce a 404 error.
 
-## Local preview
+## Replacing a resume with a newer version
 
-Double-click `index.html`. It will open in your browser without installing anything.
+1. Prepare the updated PDF.
+2. Give it the same filename as the existing PDF.
+3. Open the `resumes` folder in GitHub.
+4. Replace the old file.
+5. Commit the change.
+
+Because the website link does not change, recruiters always receive the latest file.
+
+## Adding a new profile category
+
+1. Upload the new PDF into the `resumes` folder.
+2. Open `script.js`.
+3. Find the `resumeProfiles` list.
+4. Copy an existing profile object.
+5. Update `title`, `description`, `file`, and `updated`.
+6. Commit the change.
+
+Example:
+
+```javascript
+{
+  title: "Data Governance",
+  description: "Data governance, data quality, metadata, controls, stewardship, and regulatory reporting.",
+  file: "resumes/Sastry-Angara-Data-Governance.pdf",
+  updated: "Updated July 2026"
+}
+```
+
+## Public access
+
+This is a public GitHub Pages website. Every uploaded resume can be accessed by anyone with its URL.
+
+Use recruiter-safe PDF versions. Do not include full home address, immigration document numbers, personal references, confidential client information, or sensitive personal identifiers.
+
+## Recommended recruiter instruction
+
+> Please download the latest role-aligned version of my resume from the Resume Library at https://sastryangara.github.io/#resumes rather than using an older saved copy.
+
+## Updating the website
+
+Edit files directly in GitHub and commit the changes. GitHub Pages automatically redeploys the site.
